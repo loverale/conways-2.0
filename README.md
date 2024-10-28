@@ -1,6 +1,12 @@
 ## Conways Game of Life 2.0
-### (New Rules)
+### (Framework for New Rules)
+Setup:
+- download Python 3.12
+- to run file, in terminal type "python3 conways.py"
+- if on mac, run "brew install tcl-tk" for mouse optimization
 
+#### e.g., removing overpopulation rule
+```new_grid[row][col] = 1 if alive_neighbors in [2, 3] else 0``` -> ```new_grid[row][col] = 1 if alive_neighbors >= 2 else 0```
 - For a populated cell to survive, it must have exactly two or three **or four** neighbors.
 - Each cell that is populated, but only has one neighbor dies, as if by solitude.
 - ~~Each cell that is populated and has four or more neighbors dies, as if by overpopulation.~~ -> No death by overpopulation.
